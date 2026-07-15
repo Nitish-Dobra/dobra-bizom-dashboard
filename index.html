@@ -1,0 +1,1514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DOBRA Secondary Sales Dashboard — 2026-07-15</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Segoe UI',Arial,sans-serif;background:#f5f5f5;color:#333}
+  header{background:#1565C0;color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between}
+  header h1{font-size:1.3rem;font-weight:600}
+  header .delta{font-size:.9rem;opacity:.9}
+  header .header-right{display:flex;align-items:center;gap:16px}
+  header .game-link{color:#fff;text-decoration:none;font-size:.85rem;font-weight:600;background:rgba(255,255,255,.15);padding:6px 12px;border-radius:6px}
+  header .game-link:hover{background:rgba(255,255,255,.25)}
+  .tabs{display:flex;gap:4px;padding:16px 24px 0;background:#fff;border-bottom:2px solid #e0e0e0}
+  .tab{padding:10px 24px;cursor:pointer;border-radius:6px 6px 0 0;font-weight:600;color:#555;background:#f0f0f0}
+  .tab.active{background:#1565C0;color:#fff}
+  .section{display:none;padding:24px}
+  .section.active{display:block}
+  .cards{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:24px}
+  .card{background:#fff;border-radius:8px;padding:18px 20px;flex:1;min-width:150px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+  .card-val{font-size:1.4rem;font-weight:700;margin-bottom:4px}
+  .card-label{font-size:.8rem;color:#888;text-transform:uppercase;letter-spacing:.5px}
+  .chart-wrap{background:#fff;border-radius:8px;padding:20px;margin-bottom:20px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+  h4{font-size:.95rem;color:#555;margin-bottom:12px;text-transform:uppercase;letter-spacing:.5px}
+  .bar-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+  .bar-label{width:130px;font-size:.85rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .bar-track{flex:1;height:22px;background:#f0f0f0;border-radius:4px;overflow:hidden}
+  .bar-fill{height:100%;border-radius:4px;transition:width .3s}
+  .bar-val{width:110px;text-align:right;font-size:.85rem;font-weight:600}
+  .data-table{width:100%;border-collapse:collapse;font-size:.82rem}
+  .data-table th{background:#1565C0;color:#fff;padding:8px 10px;text-align:right}
+  .data-table th:first-child{text-align:left}
+  .data-table td{padding:7px 10px;border-bottom:1px solid #eee;text-align:right}
+  .data-table td:first-child{text-align:left;font-weight:500}
+  .data-table tr:last-child td{background:#e8f0fe;font-weight:700}
+  .data-table tr.total-row td, .data-table tr.total-row th{background:#e8f0fe;font-weight:700}
+  .table-wrap{background:#fff;border-radius:8px;padding:20px;margin-bottom:20px;overflow-x:auto;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+  footer{background:#fff;border-top:1px solid #e0e0e0;padding:12px 24px;font-size:.82rem;color:#666}
+</style>
+</head>
+<body>
+<header>
+  <h1>DOBRA Secondary Sales Dashboard — 2026-07-15</h1>
+  <div class="header-right">
+    <span class="delta">▼ ₹87,394 vs yesterday</span>
+    <a class="game-link" href="Game.html">🏪 Play the Storefront Game</a>
+  </div>
+</header>
+
+<div class="tabs">
+  <div class="tab active" onclick="showTab('ftd',this)">FTD (Today)</div>
+  <div class="tab" onclick="showTab('mtd',this)">MTD (Month to Date)</div>
+</div>
+
+<!-- FTD Section -->
+<div id="ftd" class="section active">
+  <div class='cards'><div class='card' style='border-top:4px solid #2196F3'>
+          <div class='card-val'>₹102,283</div>
+          <div class='card-label'>Total Offtake</div>
+        </div><div class='card' style='border-top:4px solid #4CAF50'>
+          <div class='card-val'>Coco Poco</div>
+          <div class='card-label'>Top Brand</div>
+        </div><div class='card' style='border-top:4px solid #FF9800'>
+          <div class='card-val'>MT</div>
+          <div class='card-label'>Top Outlet Type</div>
+        </div><div class='card' style='border-top:4px solid #9C27B0'>
+          <div class='card-val'>Lulu</div>
+          <div class='card-label'>Top Chain</div>
+        </div><div class='card' style='border-top:4px solid #F44336'>
+          <div class='card-val'>KL</div>
+          <div class='card-label'>Top Region</div>
+        </div></div>
+  <div class='chart-wrap'><h4>Brand-wise Offtake (FTD)</h4>
+        <div class="bar-row">
+          <span class="bar-label">Coco Poco</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:31.8%;background:#2196F3"></div>
+          </div>
+          <span class="bar-val">₹32,546</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Pop Goli Soda</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:31.4%;background:#2196F3"></div>
+          </div>
+          <span class="bar-val">₹32,085</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Tapioca Crisps</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:21.4%;background:#2196F3"></div>
+          </div>
+          <span class="bar-val">₹21,938</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Cotton Candy</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:15.4%;background:#2196F3"></div>
+          </div>
+          <span class="bar-val">₹15,714</span>
+        </div>
+        <div class="bar-row" style="margin-top:6px;border-top:2px solid #ddd;padding-top:6px">
+          <span class="bar-label"><strong>TOTAL</strong></span>
+          <div class="bar-track"><div class="bar-fill" style="width:100%;background:#90A4AE"></div></div>
+          <span class="bar-val"><strong>₹102,283</strong></span>
+        </div></div>
+  <div class='table-wrap'><h4>Outlet Type × Brand (FTD)</h4><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Sku_Brand</th>
+      <th>DCC</th>
+      <th>DCP</th>
+      <th>DPGS</th>
+      <th>DTC</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      <th>Outlet Type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GT</th>
+      <td>2,430</td>
+      <td>0</td>
+      <td>1,372</td>
+      <td>8,482</td>
+      <td>12,285</td>
+    </tr>
+    <tr>
+      <th>MT</th>
+      <td>6,075</td>
+      <td>28,980</td>
+      <td>23,490</td>
+      <td>8,775</td>
+      <td>67,320</td>
+    </tr>
+    <tr>
+      <th>RMT</th>
+      <td>1,215</td>
+      <td>3,566</td>
+      <td>4,522</td>
+      <td>4,680</td>
+      <td>13,984</td>
+    </tr>
+    <tr class='total-row'>
+      <th>Total</th>
+      <td>9,720</td>
+      <td>32,546</td>
+      <td>29,385</td>
+      <td>21,938</td>
+      <td>93,589</td>
+    </tr>
+  </tbody>
+</table></div>
+  <div class='table-wrap'><h4>Chain × Brand (FTD)</h4><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Sku_Brand</th>
+      <th>DCC</th>
+      <th>DCP</th>
+      <th>DPGS</th>
+      <th>DTC</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      <th>Chain</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GT</th>
+      <td>2,430</td>
+      <td>0</td>
+      <td>1,372</td>
+      <td>8,482</td>
+      <td>12,285</td>
+    </tr>
+    <tr>
+      <th>Grand Hyper</th>
+      <td>1,215</td>
+      <td>2,835</td>
+      <td>3,488</td>
+      <td>1,462</td>
+      <td>9,000</td>
+    </tr>
+    <tr>
+      <th>Lulu</th>
+      <td>6,075</td>
+      <td>28,980</td>
+      <td>23,490</td>
+      <td>8,775</td>
+      <td>67,320</td>
+    </tr>
+    <tr>
+      <th>Sodhi</th>
+      <td>0</td>
+      <td>731</td>
+      <td>1,035</td>
+      <td>878</td>
+      <td>2,644</td>
+    </tr>
+    <tr>
+      <th>The New Shop</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2,340</td>
+      <td>2,340</td>
+    </tr>
+    <tr class='total-row'>
+      <th>Total</th>
+      <td>9,720</td>
+      <td>32,546</td>
+      <td>29,385</td>
+      <td>21,938</td>
+      <td>93,589</td>
+    </tr>
+  </tbody>
+</table></div>
+  <div class='table-wrap'><h4>Region × Outlet Type (FTD)</h4><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Outlet Type</th>
+      <th>GT</th>
+      <th>MT</th>
+      <th>RMT</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      <th>Region</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>AP-TS</th>
+      <td>0</td>
+      <td>28,080</td>
+      <td>0</td>
+      <td>28,080</td>
+    </tr>
+    <tr>
+      <th>Delhi NCR</th>
+      <td>1,372</td>
+      <td>0</td>
+      <td>2,644</td>
+      <td>4,016</td>
+    </tr>
+    <tr>
+      <th>KA</th>
+      <td>5,715</td>
+      <td>8,055</td>
+      <td>0</td>
+      <td>13,770</td>
+    </tr>
+    <tr>
+      <th>KL</th>
+      <td>0</td>
+      <td>31,185</td>
+      <td>9,000</td>
+      <td>40,185</td>
+    </tr>
+    <tr>
+      <th>Punjab</th>
+      <td>4,388</td>
+      <td>0</td>
+      <td>2,340</td>
+      <td>6,728</td>
+    </tr>
+    <tr>
+      <th>TN</th>
+      <td>810</td>
+      <td>0</td>
+      <td>0</td>
+      <td>810</td>
+    </tr>
+    <tr class='total-row'>
+      <th>Total</th>
+      <td>12,285</td>
+      <td>67,320</td>
+      <td>13,984</td>
+      <td>93,589</td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+
+<!-- MTD Section -->
+<div id="mtd" class="section">
+  
+    <div class='chart-wrap'>
+      <h4>Day-wise Brand Trend (MTD)</h4>
+      <canvas id='trendChart' style='max-height:300px'></canvas>
+    </div>
+    <script>
+    (function(){
+      var ctx = document.getElementById('trendChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'line',
+        data: {"labels": ["2026-07-01", "2026-07-02", "2026-07-03", "2026-07-04", "2026-07-06", "2026-07-07", "2026-07-08", "2026-07-09", "2026-07-10", "2026-07-11", "2026-07-13", "2026-07-14", "2026-07-15"], "datasets": [{"label": "Cotton Candy", "data": [3654, 4725, 3420, 6975, 9747, 10584, 20677, 29970, 13347, 11137, 3645, 42997, 15714], "borderColor": "#2196F3", "backgroundColor": "#2196F333", "fill": true, "tension": 0.3}, {"label": "Coco Poco", "data": [7746, 14030, 32200, 31320, 29890, 64020, 27720, 44792, 22245, 66150, 39060, 31185, 32546], "borderColor": "#4CAF50", "backgroundColor": "#4CAF5033", "fill": true, "tension": 0.3}, {"label": "Pop Goli Soda", "data": [16671, 15844, 15600, 24002, 75180, 60202, 44060, 91980, 46245, 53385, 34260, 49920, 32085], "borderColor": "#FF9800", "backgroundColor": "#FF980033", "fill": true, "tension": 0.3}, {"label": "Tapioca Crisps", "data": [11212, 9213, 1170, 11212, 11212, 10335, 20767, 27153, 20377, 4972, 16087, 18232, 21937], "borderColor": "#9C27B0", "backgroundColor": "#9C27B033", "fill": true, "tension": 0.3}, {"label": "Pop Boba", "data": [0, 0, 0, 9720, 0, 40095, 6075, 1215, 2430, 607, 2430, 3645, 0], "borderColor": "#2196F3", "backgroundColor": "#2196F333", "fill": true, "tension": 0.3}]},
+        options: {responsive:true, plugins:{legend:{position:'top'}},
+                   scales:{y:{beginAtZero:true}}}
+      });
+    })();
+    </script>
+  <div class='cards'><div class='card' style='border-top:4px solid #2196F3'>
+          <div class='card-val'>₹1,429,037</div>
+          <div class='card-label'>Total Offtake</div>
+        </div><div class='card' style='border-top:4px solid #4CAF50'>
+          <div class='card-val'>Pop Goli Soda</div>
+          <div class='card-label'>Top Brand</div>
+        </div><div class='card' style='border-top:4px solid #FF9800'>
+          <div class='card-val'>GT</div>
+          <div class='card-label'>Top Outlet Type</div>
+        </div><div class='card' style='border-top:4px solid #9C27B0'>
+          <div class='card-val'>GT</div>
+          <div class='card-label'>Top Chain</div>
+        </div><div class='card' style='border-top:4px solid #F44336'>
+          <div class='card-val'>KL</div>
+          <div class='card-label'>Top Region</div>
+        </div></div>
+  <div class='chart-wrap'><h4>Brand-wise Offtake (MTD)</h4>
+        <div class="bar-row">
+          <span class="bar-label">Pop Goli Soda</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:39.1%;background:#4CAF50"></div>
+          </div>
+          <span class="bar-val">₹559,436</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Coco Poco</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:31.0%;background:#4CAF50"></div>
+          </div>
+          <span class="bar-val">₹442,905</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Tapioca Crisps</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:12.9%;background:#4CAF50"></div>
+          </div>
+          <span class="bar-val">₹183,885</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Cotton Candy</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:12.4%;background:#4CAF50"></div>
+          </div>
+          <span class="bar-val">₹176,594</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Pop Boba</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:4.6%;background:#4CAF50"></div>
+          </div>
+          <span class="bar-val">₹66,218</span>
+        </div>
+        <div class="bar-row" style="margin-top:6px;border-top:2px solid #ddd;padding-top:6px">
+          <span class="bar-label"><strong>TOTAL</strong></span>
+          <div class="bar-track"><div class="bar-fill" style="width:100%;background:#90A4AE"></div></div>
+          <span class="bar-val"><strong>₹1,429,037</strong></span>
+        </div></div>
+  <div class='table-wrap'><h4>Outlet Type × Brand (MTD)</h4><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Sku_Brand</th>
+      <th>DCC</th>
+      <th>DCP</th>
+      <th>DPB</th>
+      <th>DPGS</th>
+      <th>DTC</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      <th>Outlet Type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GT</th>
+      <td>93,316</td>
+      <td>297,129</td>
+      <td>23,692</td>
+      <td>314,721</td>
+      <td>100,571</td>
+      <td>829,430</td>
+    </tr>
+    <tr>
+      <th>MT</th>
+      <td>29,025</td>
+      <td>57,470</td>
+      <td>0</td>
+      <td>76,363</td>
+      <td>30,371</td>
+      <td>193,230</td>
+    </tr>
+    <tr>
+      <th>RMT</th>
+      <td>48,258</td>
+      <td>88,306</td>
+      <td>42,525</td>
+      <td>165,651</td>
+      <td>52,942</td>
+      <td>397,683</td>
+    </tr>
+    <tr class='total-row'>
+      <th>Total</th>
+      <td>170,600</td>
+      <td>442,905</td>
+      <td>66,218</td>
+      <td>556,736</td>
+      <td>183,885</td>
+      <td>1,420,343</td>
+    </tr>
+  </tbody>
+</table></div>
+  <div class='table-wrap'><h4>Chain × Brand (MTD)</h4><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Sku_Brand</th>
+      <th>DCC</th>
+      <th>DCP</th>
+      <th>DPB</th>
+      <th>DPGS</th>
+      <th>DTC</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      <th>Chain</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Adishwar</th>
+      <td>6,075</td>
+      <td>8,820</td>
+      <td>0</td>
+      <td>12,330</td>
+      <td>5,265</td>
+      <td>32,490</td>
+    </tr>
+    <tr>
+      <th>Balaji Grand</th>
+      <td>6,993</td>
+      <td>6,720</td>
+      <td>0</td>
+      <td>37,560</td>
+      <td>1,755</td>
+      <td>53,028</td>
+    </tr>
+    <tr>
+      <th>Day Mart</th>
+      <td>4,050</td>
+      <td>5,040</td>
+      <td>0</td>
+      <td>810</td>
+      <td>4,095</td>
+      <td>13,995</td>
+    </tr>
+    <tr>
+      <th>GT</th>
+      <td>93,316</td>
+      <td>297,129</td>
+      <td>23,692</td>
+      <td>314,721</td>
+      <td>100,571</td>
+      <td>829,430</td>
+    </tr>
+    <tr>
+      <th>Grand Hyper</th>
+      <td>1,485</td>
+      <td>7,875</td>
+      <td>0</td>
+      <td>3,488</td>
+      <td>2,632</td>
+      <td>15,480</td>
+    </tr>
+    <tr>
+      <th>Kunnil</th>
+      <td>2,822</td>
+      <td>12,192</td>
+      <td>0</td>
+      <td>6,377</td>
+      <td>0</td>
+      <td>21,390</td>
+    </tr>
+    <tr>
+      <th>Lulu</th>
+      <td>28,080</td>
+      <td>57,470</td>
+      <td>0</td>
+      <td>70,970</td>
+      <td>25,691</td>
+      <td>182,212</td>
+    </tr>
+    <tr>
+      <th>Moolans</th>
+      <td>4,320</td>
+      <td>6,300</td>
+      <td>3,645</td>
+      <td>13,452</td>
+      <td>0</td>
+      <td>27,717</td>
+    </tr>
+    <tr>
+      <th>Namdhari's</th>
+      <td>1,890</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2,925</td>
+      <td>4,815</td>
+    </tr>
+    <tr>
+      <th>Nesto</th>
+      <td>4,860</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>4,860</td>
+    </tr>
+    <tr>
+      <th>Pothy's</th>
+      <td>0</td>
+      <td>0</td>
+      <td>36,450</td>
+      <td>6,720</td>
+      <td>14,040</td>
+      <td>57,210</td>
+    </tr>
+    <tr>
+      <th>Q Mart</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>12,285</td>
+      <td>12,285</td>
+    </tr>
+    <tr>
+      <th>Reliance</th>
+      <td>945</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5,393</td>
+      <td>4,680</td>
+      <td>11,018</td>
+    </tr>
+    <tr>
+      <th>Sampoorna</th>
+      <td>6,003</td>
+      <td>0</td>
+      <td>0</td>
+      <td>27,960</td>
+      <td>0</td>
+      <td>33,963</td>
+    </tr>
+    <tr>
+      <th>Sodhi</th>
+      <td>0</td>
+      <td>2,194</td>
+      <td>0</td>
+      <td>4,500</td>
+      <td>878</td>
+      <td>7,571</td>
+    </tr>
+    <tr>
+      <th>Storex</th>
+      <td>1,620</td>
+      <td>0</td>
+      <td>0</td>
+      <td>8,880</td>
+      <td>0</td>
+      <td>10,500</td>
+    </tr>
+    <tr>
+      <th>The New Shop</th>
+      <td>1,458</td>
+      <td>0</td>
+      <td>2,430</td>
+      <td>3,480</td>
+      <td>6,338</td>
+      <td>13,706</td>
+    </tr>
+    <tr>
+      <th>The New shop</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2,730</td>
+      <td>2,730</td>
+    </tr>
+    <tr>
+      <th>Ushodaya</th>
+      <td>5,670</td>
+      <td>34,965</td>
+      <td>0</td>
+      <td>34,095</td>
+      <td>0</td>
+      <td>74,730</td>
+    </tr>
+    <tr>
+      <th>Wagon mart</th>
+      <td>1,012</td>
+      <td>4,200</td>
+      <td>0</td>
+      <td>6,000</td>
+      <td>0</td>
+      <td>11,212</td>
+    </tr>
+    <tr class='total-row'>
+      <th>Total</th>
+      <td>170,600</td>
+      <td>442,905</td>
+      <td>66,218</td>
+      <td>556,736</td>
+      <td>183,885</td>
+      <td>1,420,343</td>
+    </tr>
+  </tbody>
+</table></div>
+  <div class='table-wrap'><h4>Region × Outlet Type (MTD)</h4><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Outlet Type</th>
+      <th>GT</th>
+      <th>MT</th>
+      <th>RMT</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      <th>Region</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>AP-TS</th>
+      <td>60,428</td>
+      <td>36,825</td>
+      <td>174,006</td>
+      <td>271,259</td>
+    </tr>
+    <tr>
+      <th>Delhi NCR</th>
+      <td>242,988</td>
+      <td>0</td>
+      <td>30,119</td>
+      <td>273,108</td>
+    </tr>
+    <tr>
+      <th>KA</th>
+      <td>108,614</td>
+      <td>35,824</td>
+      <td>37,305</td>
+      <td>181,743</td>
+    </tr>
+    <tr>
+      <th>KL</th>
+      <td>282,756</td>
+      <td>120,581</td>
+      <td>151,865</td>
+      <td>555,201</td>
+    </tr>
+    <tr>
+      <th>Punjab</th>
+      <td>39,069</td>
+      <td>0</td>
+      <td>4,388</td>
+      <td>43,456</td>
+    </tr>
+    <tr>
+      <th>TN</th>
+      <td>95,575</td>
+      <td>0</td>
+      <td>0</td>
+      <td>95,575</td>
+    </tr>
+    <tr class='total-row'>
+      <th>Total</th>
+      <td>829,430</td>
+      <td>193,230</td>
+      <td>397,683</td>
+      <td>1,420,343</td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+
+<footer>
+  Generated 2026-07-15 21:06 | Data source: Bizom Order vs Fulfilment
+  
+        <details style='margin-top:8px'>
+          <summary style='cursor:pointer;color:#F44336'>12 unmapped outlet/employee records (click to expand)</summary>
+          <div class='table-wrap'><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Zone</th>
+      <th>Subzone</th>
+      <th>Distributor</th>
+      <th>Warehouse_Type</th>
+      <th>Beat</th>
+      <th>Reporting_To</th>
+      <th>Employee Name</th>
+      <th>Designation</th>
+      <th>Bizom User Name</th>
+      <th>City_Name</th>
+      <th>outletid</th>
+      <th>Outlet Name</th>
+      <th>Area</th>
+      <th>Class</th>
+      <th>Type</th>
+      <th>OrderId</th>
+      <th>PO_Number</th>
+      <th>Manual_PO</th>
+      <th>Order_Date</th>
+      <th>Order Time</th>
+      <th>Order_State</th>
+      <th>Category</th>
+      <th>SKUID</th>
+      <th>SKU</th>
+      <th>Item_name</th>
+      <th>Sku_Code</th>
+      <th>Sku_Brand</th>
+      <th>Invoice Id</th>
+      <th>Bill No</th>
+      <th>Order_Quantity</th>
+      <th>Fulfilled_Quantity</th>
+      <th>Order Amount</th>
+      <th>Fulfilled Amount</th>
+      <th>Fulfilled_Date</th>
+      <th>Sku_Wise_Fulfilled_Status</th>
+      <th>Fulfilled_in_Days</th>
+      <th>Order_Reason</th>
+      <th>Sku_Wise_Order_Reason</th>
+      <th>SKU Remove Reason</th>
+      <th>Sub_Category</th>
+      <th>Outlet ERP ID</th>
+      <th>Distributor_ERP_ID</th>
+      <th>Order_Quantity_in_Cases_Pieces</th>
+      <th>Delivery_Status</th>
+      <th>Beat_Id</th>
+      <th>Beat_name</th>
+      <th>Delivery_date</th>
+      <th>Order_delivery_date</th>
+      <th>user_id</th>
+      <th>Order_Quantity_In_KG</th>
+      <th>Fulfilled_Quantity_In_KG</th>
+      <th>Reporteeview User</th>
+      <th>Reject_Reason</th>
+      <th>Outlet Type</th>
+      <th>Chain</th>
+      <th>Region</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1547</th>
+      <td>NORTH</td>
+      <td>HARYANA</td>
+      <td>MANJU ENTERPRISES</td>
+      <td>-</td>
+      <td>GURGAON (SEC 15-SEC 50) M</td>
+      <td>Y V Vijay Kumar</td>
+      <td>Mukesh Shukla</td>
+      <td>Territory Sales Manager (TSM)</td>
+      <td>dcj.gurgse1</td>
+      <td>Gurgaon</td>
+      <td>11174</td>
+      <td>SNAPSTOP</td>
+      <td>MANJU ENTERPRISES</td>
+      <td>GOURMET STORE</td>
+      <td>GT</td>
+      <td>91488</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2026-07-15</td>
+      <td>13:07:18</td>
+      <td>accepted</td>
+      <td>-</td>
+      <td>509</td>
+      <td>DOBRA COTTON CANDY BUBBLEGUM 13.5 GM</td>
+      <td>-</td>
+      <td>-</td>
+      <td>DCC</td>
+      <td>-</td>
+      <td>-</td>
+      <td>9</td>
+      <td>-</td>
+      <td>284</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Not Fulfilled</td>
+      <td>-20649</td>
+      <td>-</td>
+      <td>Rejected Or Not fulfilled</td>
+      <td>-</td>
+      <td>Plastic Glass</td>
+      <td>-</td>
+      <td>-</td>
+      <td>0,9</td>
+      <td>-</td>
+      <td>511</td>
+      <td>GURGAON (SEC 15-SEC 50) M</td>
+      <td>-</td>
+      <td>2026-07-15 13:07:18</td>
+      <td>17</td>
+      <td>9</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Delhi NCR</td>
+    </tr>
+    <tr>
+      <th>1548</th>
+      <td>NORTH</td>
+      <td>HARYANA</td>
+      <td>MANJU ENTERPRISES</td>
+      <td>-</td>
+      <td>GURGAON (SEC 15-SEC 50) M</td>
+      <td>Y V Vijay Kumar</td>
+      <td>Mukesh Shukla</td>
+      <td>Territory Sales Manager (TSM)</td>
+      <td>dcj.gurgse1</td>
+      <td>Gurgaon</td>
+      <td>11174</td>
+      <td>SNAPSTOP</td>
+      <td>MANJU ENTERPRISES</td>
+      <td>GOURMET STORE</td>
+      <td>GT</td>
+      <td>91488</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2026-07-15</td>
+      <td>13:07:18</td>
+      <td>accepted</td>
+      <td>-</td>
+      <td>510</td>
+      <td>DOBRA COTTON CANDY STRAWBERRY BLAST 13.5 GM</td>
+      <td>-</td>
+      <td>-</td>
+      <td>DCC</td>
+      <td>-</td>
+      <td>-</td>
+      <td>9</td>
+      <td>-</td>
+      <td>284</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Not Fulfilled</td>
+      <td>-20649</td>
+      <td>-</td>
+      <td>Rejected Or Not fulfilled</td>
+      <td>-</td>
+      <td>Plastic Glass</td>
+      <td>-</td>
+      <td>-</td>
+      <td>0,9</td>
+      <td>-</td>
+      <td>511</td>
+      <td>GURGAON (SEC 15-SEC 50) M</td>
+      <td>-</td>
+      <td>2026-07-15 13:07:18</td>
+      <td>17</td>
+      <td>9</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Delhi NCR</td>
+    </tr>
+    <tr>
+      <th>1549</th>
+      <td>NORTH</td>
+      <td>HARYANA</td>
+      <td>MANJU ENTERPRISES</td>
+      <td>-</td>
+      <td>GURGAON (SEC 15-SEC 50) M</td>
+      <td>Y V Vijay Kumar</td>
+      <td>Mukesh Shukla</td>
+      <td>Territory Sales Manager (TSM)</td>
+      <td>dcj.gurgse1</td>
+      <td>Gurgaon</td>
+      <td>11174</td>
+      <td>SNAPSTOP</td>
+      <td>MANJU ENTERPRISES</td>
+      <td>GOURMET STORE</td>
+      <td>GT</td>
+      <td>91488</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2026-07-15</td>
+      <td>13:07:18</td>
+      <td>accepted</td>
+      <td>-</td>
+      <td>511</td>
+      <td>DOBRA COTTON CANDY SOUR MANGO 13.5 GM</td>
+      <td>-</td>
+      <td>-</td>
+      <td>DCC</td>
+      <td>-</td>
+      <td>-</td>
+      <td>9</td>
+      <td>-</td>
+      <td>284</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Not Fulfilled</td>
+      <td>-20649</td>
+      <td>-</td>
+      <td>Rejected Or Not fulfilled</td>
+      <td>-</td>
+      <td>Plastic Glass</td>
+      <td>-</td>
+      <td>-</td>
+      <td>0,9</td>
+      <td>-</td>
+      <td>511</td>
+      <td>GURGAON (SEC 15-SEC 50) M</td>
+      <td>-</td>
+      <td>2026-07-15 13:07:18</td>
+      <td>17</td>
+      <td>9</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Delhi NCR</td>
+    </tr>
+    <tr>
+      <th>1550</th>
+      <td>NORTH</td>
+      <td>HARYANA</td>
+      <td>MANJU ENTERPRISES</td>
+      <td>-</td>
+      <td>GURGAON (SEC 15-SEC 50) M</td>
+      <td>Y V Vijay Kumar</td>
+      <td>Mukesh Shukla</td>
+      <td>Territory Sales Manager (TSM)</td>
+      <td>dcj.gurgse1</td>
+      <td>Gurgaon</td>
+      <td>11174</td>
+      <td>SNAPSTOP</td>
+      <td>MANJU ENTERPRISES</td>
+      <td>GOURMET STORE</td>
+      <td>GT</td>
+      <td>91488</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2026-07-15</td>
+      <td>13:07:18</td>
+      <td>accepted</td>
+      <td>-</td>
+      <td>512</td>
+      <td>DOBRA COTTON CANDY COOL COFFEE 13.5 GM</td>
+      <td>-</td>
+      <td>-</td>
+      <td>DCC</td>
+      <td>-</td>
+      <td>-</td>
+      <td>9</td>
+      <td>-</td>
+      <td>284</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Not Fulfilled</td>
+      <td>-20649</td>
+      <td>-</td>
+      <td>Rejected Or Not fulfilled</td>
+      <td>-</td>
+      <td>Plastic Glass</td>
+      <td>-</td>
+      <td>-</td>
+      <td>0,9</td>
+      <td>-</td>
+      <td>511</td>
+      <td>GURGAON (SEC 15-SEC 50) M</td>
+      <td>-</td>
+      <td>2026-07-15 13:07:18</td>
+      <td>17</td>
+      <td>9</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Delhi NCR</td>
+    </tr>
+    <tr>
+      <th>1551</th>
+      <td>NORTH</td>
+      <td>HARYANA</td>
+      <td>MANJU ENTERPRISES</td>
+      <td>-</td>
+      <td>GURGAON (SEC 15-SEC 50) M</td>
+      <td>Y V Vijay Kumar</td>
+      <td>Mukesh Shukla</td>
+      <td>Territory Sales Manager (TSM)</td>
+      <td>dcj.gurgse1</td>
+      <td>Gurgaon</td>
+      <td>11174</td>
+      <td>SNAPSTOP</td>
+      <td>MANJU ENTERPRISES</td>
+      <td>GOURMET STORE</td>
+      <td>GT</td>
+      <td>91488</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2026-07-15</td>
+      <td>13:07:18</td>
+      <td>accepted</td>
+      <td>-</td>
+      <td>495</td>
+      <td>DOBRA POP GOLI MARBLE SODA BLUBERRY&nbsp;&nbsp;225ML</td>
+      <td>-</td>
+      <td>-</td>
+      <td>DPGS</td>
+      <td>-</td>
+      <td>-</td>
+      <td>12</td>
+      <td>-</td>
+      <td>675</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Not Fulfilled</td>
+      <td>-20649</td>
+      <td>-</td>
+      <td>Rejected Or Not fulfilled</td>
+      <td>-</td>
+      <td>Soda</td>
+      <td>-</td>
+      <td>-</td>
+      <td>0,12</td>
+      <td>-</td>
+      <td>511</td>
+      <td>GURGAON (SEC 15-SEC 50) M</td>
+      <td>-</td>
+      <td>2026-07-15 13:07:18</td>
+      <td>17</td>
+      <td>12</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Delhi NCR</td>
+    </tr>
+    <tr>
+      <th>1552</th>
+      <td>NORTH</td>
+      <td>HARYANA</td>
+      <td>MANJU ENTERPRISES</td>
+      <td>-</td>
+      <td>GURGAON (SEC 15-SEC 50) M</td>
+      <td>Y V Vijay Kumar</td>
+      <td>Mukesh Shukla</td>
+      <td>Territory Sales Manager (TSM)</td>
+      <td>dcj.gurgse1</td>
+      <td>Gurgaon</td>
+      <td>11174</td>
+      <td>SNAPSTOP</td>
+      <td>MANJU ENTERPRISES</td>
+      <td>GOURMET STORE</td>
+      <td>GT</td>
+      <td>91488</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2026-07-15</td>
+      <td>13:07:18</td>
+      <td>accepted</td>
+      <td>-</td>
+      <td>496</td>
+      <td>DOBRA POP GOLI MARBLE SODA NIMBU MASALA 225ML</td>
+      <td>-</td>
+      <td>-</td>
+      <td>DPGS</td>
+      <td>-</td>
+      <td>-</td>
+      <td>12</td>
+      <td>-</td>
+      <td>675</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Not Fulfilled</td>
+      <td>-20649</td>
+      <td>-</td>
+      <td>Rejected Or Not fulfilled</td>
+      <td>-</td>
+      <td>Soda</td>
+      <td>-</td>
+      <td>-</td>
+      <td>0,12</td>
+      <td>-</td>
+      <td>511</td>
+      <td>GURGAON (SEC 15-SEC 50) M</td>
+      <td>-</td>
+      <td>2026-07-15 13:07:18</td>
+      <td>17</td>
+      <td>12</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Delhi NCR</td>
+    </tr>
+    <tr>
+      <th>1553</th>
+      <td>NORTH</td>
+      <td>HARYANA</td>
+      <td>MANJU ENTERPRISES</td>
+      <td>-</td>
+      <td>GURGAON (SEC 15-SEC 50) M</td>
+      <td>Y V Vijay Kumar</td>
+      <td>Mukesh Shukla</td>
+      <td>Territory Sales Manager (TSM)</td>
+      <td>dcj.gurgse1</td>
+      <td>Gurgaon</td>
+      <td>11174</td>
+      <td>SNAPSTOP</td>
+      <td>MANJU ENTERPRISES</td>
+      <td>GOURMET STORE</td>
+      <td>GT</td>
+      <td>91488</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2026-07-15</td>
+      <td>13:07:18</td>
+      <td>accepted</td>
+      <td>-</td>
+      <td>497</td>
+      <td>DOBRA POP GOLI MARBLE SODA GRAPE 225ML</td>
+      <td>-</td>
+      <td>-</td>
+      <td>DPGS</td>
+      <td>-</td>
+      <td>-</td>
+      <td>12</td>
+      <td>-</td>
+      <td>675</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Not Fulfilled</td>
+      <td>-20649</td>
+      <td>-</td>
+      <td>Rejected Or Not fulfilled</td>
+      <td>-</td>
+      <td>Soda</td>
+      <td>-</td>
+      <td>-</td>
+      <td>0,12</td>
+      <td>-</td>
+      <td>511</td>
+      <td>GURGAON (SEC 15-SEC 50) M</td>
+      <td>-</td>
+      <td>2026-07-15 13:07:18</td>
+      <td>17</td>
+      <td>12</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Delhi NCR</td>
+    </tr>
+    <tr>
+      <th>1554</th>
+      <td>NORTH</td>
+      <td>HARYANA</td>
+      <td>MANJU ENTERPRISES</td>
+      <td>-</td>
+      <td>GURGAON (SEC 15-SEC 50) M</td>
+      <td>Y V Vijay Kumar</td>
+      <td>Mukesh Shukla</td>
+      <td>Territory Sales Manager (TSM)</td>
+      <td>dcj.gurgse1</td>
+      <td>Gurgaon</td>
+      <td>11174</td>
+      <td>SNAPSTOP</td>
+      <td>MANJU ENTERPRISES</td>
+      <td>GOURMET STORE</td>
+      <td>GT</td>
+      <td>91488</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2026-07-15</td>
+      <td>13:07:18</td>
+      <td>accepted</td>
+      <td>-</td>
+      <td>508</td>
+      <td>DOBRA POP GOLI MARBLE SODA MANGO 225ML</td>
+      <td>-</td>
+      <td>-</td>
+      <td>DPGS</td>
+      <td>-</td>
+      <td>-</td>
+      <td>12</td>
+      <td>-</td>
+      <td>675</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Not Fulfilled</td>
+      <td>-20649</td>
+      <td>-</td>
+      <td>Rejected Or Not fulfilled</td>
+      <td>-</td>
+      <td>Soda</td>
+      <td>-</td>
+      <td>-</td>
+      <td>0,12</td>
+      <td>-</td>
+      <td>511</td>
+      <td>GURGAON (SEC 15-SEC 50) M</td>
+      <td>-</td>
+      <td>2026-07-15 13:07:18</td>
+      <td>17</td>
+      <td>12</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Delhi NCR</td>
+    </tr>
+    <tr>
+      <th>1555</th>
+      <td>SOUTH-2</td>
+      <td>KERALA</td>
+      <td>UNITED AGENCIES</td>
+      <td>-</td>
+      <td>CALICUT 3</td>
+      <td>B Rajendran</td>
+      <td>Dharmaraj</td>
+      <td>Sales Executive</td>
+      <td>dcj.bangse3</td>
+      <td>Ernakulam</td>
+      <td>11175</td>
+      <td>Nesto</td>
+      <td>UNITED AGENCIES</td>
+      <td>HYPER MARKET</td>
+      <td>RMT</td>
+      <td>91489</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2026-07-15</td>
+      <td>13:10:58</td>
+      <td>accepted</td>
+      <td>-</td>
+      <td>509</td>
+      <td>DOBRA COTTON CANDY BUBBLEGUM 13.5 GM</td>
+      <td>-</td>
+      <td>-</td>
+      <td>DCC</td>
+      <td>-</td>
+      <td>-</td>
+      <td>36</td>
+      <td>-</td>
+      <td>1,215</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Not Fulfilled</td>
+      <td>-20649</td>
+      <td>-</td>
+      <td>Rejected Or Not fulfilled</td>
+      <td>-</td>
+      <td>Plastic Glass</td>
+      <td>-</td>
+      <td>0</td>
+      <td>1,0</td>
+      <td>-</td>
+      <td>41</td>
+      <td>CALICUT 3</td>
+      <td>-</td>
+      <td>2026-07-15 13:10:58</td>
+      <td>47</td>
+      <td>36</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>KL</td>
+    </tr>
+    <tr>
+      <th>1556</th>
+      <td>SOUTH-2</td>
+      <td>KERALA</td>
+      <td>UNITED AGENCIES</td>
+      <td>-</td>
+      <td>CALICUT 3</td>
+      <td>B Rajendran</td>
+      <td>Dharmaraj</td>
+      <td>Sales Executive</td>
+      <td>dcj.bangse3</td>
+      <td>Ernakulam</td>
+      <td>11175</td>
+      <td>Nesto</td>
+      <td>UNITED AGENCIES</td>
+      <td>HYPER MARKET</td>
+      <td>RMT</td>
+      <td>91489</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2026-07-15</td>
+      <td>13:10:58</td>
+      <td>accepted</td>
+      <td>-</td>
+      <td>510</td>
+      <td>DOBRA COTTON CANDY STRAWBERRY BLAST 13.5 GM</td>
+      <td>-</td>
+      <td>-</td>
+      <td>DCC</td>
+      <td>-</td>
+      <td>-</td>
+      <td>36</td>
+      <td>-</td>
+      <td>1,215</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Not Fulfilled</td>
+      <td>-20649</td>
+      <td>-</td>
+      <td>Rejected Or Not fulfilled</td>
+      <td>-</td>
+      <td>Plastic Glass</td>
+      <td>-</td>
+      <td>0</td>
+      <td>1,0</td>
+      <td>-</td>
+      <td>41</td>
+      <td>CALICUT 3</td>
+      <td>-</td>
+      <td>2026-07-15 13:10:58</td>
+      <td>47</td>
+      <td>36</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>KL</td>
+    </tr>
+    <tr>
+      <th>1557</th>
+      <td>SOUTH-2</td>
+      <td>KERALA</td>
+      <td>UNITED AGENCIES</td>
+      <td>-</td>
+      <td>CALICUT 3</td>
+      <td>B Rajendran</td>
+      <td>Dharmaraj</td>
+      <td>Sales Executive</td>
+      <td>dcj.bangse3</td>
+      <td>Ernakulam</td>
+      <td>11175</td>
+      <td>Nesto</td>
+      <td>UNITED AGENCIES</td>
+      <td>HYPER MARKET</td>
+      <td>RMT</td>
+      <td>91489</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2026-07-15</td>
+      <td>13:10:58</td>
+      <td>accepted</td>
+      <td>-</td>
+      <td>511</td>
+      <td>DOBRA COTTON CANDY SOUR MANGO 13.5 GM</td>
+      <td>-</td>
+      <td>-</td>
+      <td>DCC</td>
+      <td>-</td>
+      <td>-</td>
+      <td>36</td>
+      <td>-</td>
+      <td>1,215</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Not Fulfilled</td>
+      <td>-20649</td>
+      <td>-</td>
+      <td>Rejected Or Not fulfilled</td>
+      <td>-</td>
+      <td>Plastic Glass</td>
+      <td>-</td>
+      <td>0</td>
+      <td>1,0</td>
+      <td>-</td>
+      <td>41</td>
+      <td>CALICUT 3</td>
+      <td>-</td>
+      <td>2026-07-15 13:10:58</td>
+      <td>47</td>
+      <td>36</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>KL</td>
+    </tr>
+    <tr>
+      <th>1558</th>
+      <td>SOUTH-2</td>
+      <td>KERALA</td>
+      <td>UNITED AGENCIES</td>
+      <td>-</td>
+      <td>CALICUT 3</td>
+      <td>B Rajendran</td>
+      <td>Dharmaraj</td>
+      <td>Sales Executive</td>
+      <td>dcj.bangse3</td>
+      <td>Ernakulam</td>
+      <td>11175</td>
+      <td>Nesto</td>
+      <td>UNITED AGENCIES</td>
+      <td>HYPER MARKET</td>
+      <td>RMT</td>
+      <td>91489</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2026-07-15</td>
+      <td>13:10:58</td>
+      <td>accepted</td>
+      <td>-</td>
+      <td>512</td>
+      <td>DOBRA COTTON CANDY COOL COFFEE 13.5 GM</td>
+      <td>-</td>
+      <td>-</td>
+      <td>DCC</td>
+      <td>-</td>
+      <td>-</td>
+      <td>36</td>
+      <td>-</td>
+      <td>1,215</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Not Fulfilled</td>
+      <td>-20649</td>
+      <td>-</td>
+      <td>Rejected Or Not fulfilled</td>
+      <td>-</td>
+      <td>Plastic Glass</td>
+      <td>-</td>
+      <td>0</td>
+      <td>1,0</td>
+      <td>-</td>
+      <td>41</td>
+      <td>CALICUT 3</td>
+      <td>-</td>
+      <td>2026-07-15 13:10:58</td>
+      <td>47</td>
+      <td>36</td>
+      <td>0</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>KL</td>
+    </tr>
+  </tbody>
+</table></div>
+        </details>
+</footer>
+
+<script>
+function showTab(id, el) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  el.classList.add('active');
+}
+</script>
+</body>
+</html>
