@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DOBRA Secondary Sales Dashboard — 2026-08-30</title>
+<title>DOBRA Secondary Sales Dashboard — 2026-08-31</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
@@ -43,9 +43,9 @@
 </head>
 <body>
 <header>
-  <h1>DOBRA Secondary Sales Dashboard — 2026-08-30</h1>
+  <h1>DOBRA Secondary Sales Dashboard — 2026-08-31</h1>
   <div class="header-right">
-    <span class="delta">▼ ₹93,450 vs yesterday</span>
+    <span class="delta">▲ ₹65,145 vs yesterday</span>
     <a class="game-link" href="Game.html">🏪 Play the Storefront Game</a>
   </div>
 </header>
@@ -58,25 +58,212 @@
 <!-- FTD Section -->
 <div id="ftd" class="section active">
   <div class='cards'><div class='card' style='border-top:4px solid #2196F3'>
-          <div class='card-val'>₹0</div>
+          <div class='card-val'>₹32,572</div>
           <div class='card-label'>Total Offtake</div>
         </div><div class='card' style='border-top:4px solid #4CAF50'>
-          <div class='card-val'>—</div>
+          <div class='card-val'>Pop Goli Soda</div>
           <div class='card-label'>Top Brand</div>
         </div><div class='card' style='border-top:4px solid #FF9800'>
-          <div class='card-val'>—</div>
+          <div class='card-val'>GT</div>
           <div class='card-label'>Top Outlet Type</div>
         </div><div class='card' style='border-top:4px solid #9C27B0'>
-          <div class='card-val'>—</div>
+          <div class='card-val'>GT</div>
           <div class='card-label'>Top Chain</div>
         </div><div class='card' style='border-top:4px solid #F44336'>
-          <div class='card-val'>—</div>
+          <div class='card-val'>Delhi NCR</div>
           <div class='card-label'>Top Region</div>
         </div></div>
-  
-  <p><em>No data</em></p>
-  <p><em>No data</em></p>
-  <p><em>No data</em></p>
+  <div class='chart-wrap'><h4>Brand-wise Offtake (FTD)</h4>
+        <div class="bar-row">
+          <span class="bar-label">Pop Goli Soda</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:30.3%;background:#2196F3"></div>
+          </div>
+          <span class="bar-val">₹9,878</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Coco Poco</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:30.0%;background:#2196F3"></div>
+          </div>
+          <span class="bar-val">₹9,765</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Pop Boba</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:14.9%;background:#2196F3"></div>
+          </div>
+          <span class="bar-val">₹4,860</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Cotton Candy</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:14.3%;background:#2196F3"></div>
+          </div>
+          <span class="bar-val">₹4,658</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Tapioca Crisps</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:10.5%;background:#2196F3"></div>
+          </div>
+          <span class="bar-val">₹3,412</span>
+        </div>
+        <div class="bar-row" style="margin-top:6px;border-top:2px solid #ddd;padding-top:6px">
+          <span class="bar-label"><strong>TOTAL</strong></span>
+          <div class="bar-track"><div class="bar-fill" style="width:100%;background:#90A4AE"></div></div>
+          <span class="bar-val"><strong>₹32,572</strong></span>
+        </div></div>
+  <div class='table-wrap'><h4>Outlet Type × Brand (FTD)</h4><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Sku_Brand</th>
+      <th>DCC</th>
+      <th>DCP</th>
+      <th>DPB</th>
+      <th>DPGS</th>
+      <th>DTC</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      <th>Outlet Type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GT</th>
+      <td>3,848</td>
+      <td>9,765</td>
+      <td>4,860</td>
+      <td>9,878</td>
+      <td>3,412</td>
+      <td>31,762</td>
+    </tr>
+    <tr>
+      <th>MT</th>
+      <td>810</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>810</td>
+    </tr>
+    <tr class='total-row'>
+      <th>Total</th>
+      <td>4,658</td>
+      <td>9,765</td>
+      <td>4,860</td>
+      <td>9,878</td>
+      <td>3,412</td>
+      <td>32,572</td>
+    </tr>
+  </tbody>
+</table></div>
+  <div class='table-wrap'><h4>Chain × Brand (FTD)</h4><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Sku_Brand</th>
+      <th>DCC</th>
+      <th>DCP</th>
+      <th>DPB</th>
+      <th>DPGS</th>
+      <th>DTC</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      <th>Chain</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GT</th>
+      <td>3,848</td>
+      <td>9,765</td>
+      <td>4,860</td>
+      <td>9,878</td>
+      <td>3,412</td>
+      <td>31,762</td>
+    </tr>
+    <tr>
+      <th>Reliance</th>
+      <td>810</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>810</td>
+    </tr>
+    <tr class='total-row'>
+      <th>Total</th>
+      <td>4,658</td>
+      <td>9,765</td>
+      <td>4,860</td>
+      <td>9,878</td>
+      <td>3,412</td>
+      <td>32,572</td>
+    </tr>
+  </tbody>
+</table></div>
+  <div class='table-wrap'><h4>Region × Outlet Type (FTD)</h4><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Outlet Type</th>
+      <th>GT</th>
+      <th>MT</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      <th>Region</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Delhi NCR</th>
+      <td>15,368</td>
+      <td>0</td>
+      <td>15,368</td>
+    </tr>
+    <tr>
+      <th>KA</th>
+      <td>3,015</td>
+      <td>810</td>
+      <td>3,825</td>
+    </tr>
+    <tr>
+      <th>KL</th>
+      <td>6,585</td>
+      <td>0</td>
+      <td>6,585</td>
+    </tr>
+    <tr>
+      <th>TN</th>
+      <td>6,795</td>
+      <td>0</td>
+      <td>6,795</td>
+    </tr>
+    <tr class='total-row'>
+      <th>Total</th>
+      <td>31,762</td>
+      <td>810</td>
+      <td>32,572</td>
+    </tr>
+  </tbody>
+</table></div>
 </div>
 
 <!-- MTD Section -->
@@ -91,14 +278,14 @@
       var ctx = document.getElementById('trendChart').getContext('2d');
       new Chart(ctx, {
         type: 'line',
-        data: {"labels": ["2026-08-01", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-08", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-22", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-29"], "datasets": [{"label": "Cotton Candy", "data": [17145, 23969, 3645, 5049, 8147, 2092, 19743, 5062, 7755, 10935, 11002, 12555, 3240, 3645, 23895, 8842, 1316, 7695, 14580, 18333, 4657, 3240, 7290], "borderColor": "#2196F3", "backgroundColor": "#2196F333", "fill": true, "tension": 0.3}, {"label": "Coco Poco", "data": [16590, 28473, 129521, 13050, 54315, 10080, 59325, 16695, 9675, 29925, 16987, 7560, 51592, 48735, 26145, 8820, 61650, 90438, 21892, 7560, 8190, 15097, 11340], "borderColor": "#4CAF50", "backgroundColor": "#4CAF5033", "fill": true, "tension": 0.3}, {"label": "Pop Goli Soda", "data": [13395, 42780, 21510, 17505, 51330, 9840, 83512, 29610, 33382, 25155, 55938, 41332, 13173, 20085, 16590, 38407, 2745, 29490, 24540, 33030, 4140, 13005, 23317], "borderColor": "#FF9800", "backgroundColor": "#FF980033", "fill": true, "tension": 0.3}, {"label": "Tapioca Crisps", "data": [26130, 0, 6483, 3315, 2486, 23985, 14040, 14722, 0, 15795, 11895, 0, 3510, 16770, 7897, 19743, 0, 5460, 17257, 30712, 5167, 2047, 4777], "borderColor": "#9C27B0", "backgroundColor": "#9C27B033", "fill": true, "tension": 0.3}, {"label": "Pop Boba", "data": [0, 1822, 0, 0, 2430, 4860, 0, 0, 3645, 3645, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1822, 0, 0, 0], "borderColor": "#2196F3", "backgroundColor": "#2196F333", "fill": true, "tension": 0.3}]},
+        data: {"labels": ["2026-08-01", "2026-08-03", "2026-08-04", "2026-08-05", "2026-08-06", "2026-08-07", "2026-08-08", "2026-08-10", "2026-08-11", "2026-08-12", "2026-08-13", "2026-08-14", "2026-08-17", "2026-08-18", "2026-08-19", "2026-08-20", "2026-08-21", "2026-08-22", "2026-08-24", "2026-08-25", "2026-08-26", "2026-08-27", "2026-08-29", "2026-08-31"], "datasets": [{"label": "Cotton Candy", "data": [17145, 23969, 3645, 5049, 8147, 2092, 19743, 5062, 7755, 10935, 11002, 12555, 3240, 3645, 23895, 8842, 1316, 7695, 14580, 18333, 4657, 3240, 7290, 4657], "borderColor": "#2196F3", "backgroundColor": "#2196F333", "fill": true, "tension": 0.3}, {"label": "Coco Poco", "data": [19740, 28473, 129521, 13050, 54315, 10080, 59325, 16695, 9675, 29925, 16987, 7560, 51592, 48735, 26145, 8820, 61650, 90438, 21892, 7560, 8190, 15097, 11340, 9765], "borderColor": "#4CAF50", "backgroundColor": "#4CAF5033", "fill": true, "tension": 0.3}, {"label": "Pop Goli Soda", "data": [13395, 42780, 21510, 17505, 51330, 9840, 83512, 29610, 33382, 25155, 55938, 41332, 13173, 20085, 16590, 38407, 2745, 29490, 24540, 33030, 4140, 13005, 23317, 9877], "borderColor": "#FF9800", "backgroundColor": "#FF980033", "fill": true, "tension": 0.3}, {"label": "Tapioca Crisps", "data": [26130, 0, 6483, 3315, 2486, 23985, 14040, 14722, 0, 15795, 11895, 0, 3510, 16770, 7897, 19743, 0, 5460, 17257, 30712, 5167, 2047, 4777, 3412], "borderColor": "#9C27B0", "backgroundColor": "#9C27B033", "fill": true, "tension": 0.3}, {"label": "Pop Boba", "data": [0, 1822, 0, 0, 2430, 4860, 0, 0, 3645, 3645, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1822, 0, 0, 0, 4860], "borderColor": "#2196F3", "backgroundColor": "#2196F333", "fill": true, "tension": 0.3}]},
         options: {responsive:true, plugins:{legend:{position:'top'}},
                    scales:{y:{beginAtZero:true}}}
       });
     })();
     </script>
   <div class='cards'><div class='card' style='border-top:4px solid #2196F3'>
-          <div class='card-val'>₹1,861,732</div>
+          <div class='card-val'>₹1,897,454</div>
           <div class='card-label'>Total Offtake</div>
         </div><div class='card' style='border-top:4px solid #4CAF50'>
           <div class='card-val'>Coco Poco</div>
@@ -119,40 +306,40 @@
           <div class="bar-track">
             <div class="bar-fill" style="width:39.9%;background:#4CAF50"></div>
           </div>
-          <span class="bar-val">₹743,659</span>
+          <span class="bar-val">₹756,574</span>
         </div>
         <div class="bar-row">
           <span class="bar-label">Pop Goli Soda</span>
           <div class="bar-track">
-            <div class="bar-fill" style="width:34.6%;background:#4CAF50"></div>
+            <div class="bar-fill" style="width:34.5%;background:#4CAF50"></div>
           </div>
-          <span class="bar-val">₹643,815</span>
+          <span class="bar-val">₹653,692</span>
         </div>
         <div class="bar-row">
           <span class="bar-label">Tapioca Crisps</span>
           <div class="bar-track">
-            <div class="bar-fill" style="width:12.5%;background:#4CAF50"></div>
+            <div class="bar-fill" style="width:12.4%;background:#4CAF50"></div>
           </div>
-          <span class="bar-val">₹232,196</span>
+          <span class="bar-val">₹235,609</span>
         </div>
         <div class="bar-row">
           <span class="bar-label">Cotton Candy</span>
           <div class="bar-track">
             <div class="bar-fill" style="width:12.0%;background:#4CAF50"></div>
           </div>
-          <span class="bar-val">₹223,837</span>
+          <span class="bar-val">₹228,494</span>
         </div>
         <div class="bar-row">
           <span class="bar-label">Pop Boba</span>
           <div class="bar-track">
-            <div class="bar-fill" style="width:1.0%;background:#4CAF50"></div>
+            <div class="bar-fill" style="width:1.2%;background:#4CAF50"></div>
           </div>
-          <span class="bar-val">₹18,225</span>
+          <span class="bar-val">₹23,085</span>
         </div>
         <div class="bar-row" style="margin-top:6px;border-top:2px solid #ddd;padding-top:6px">
           <span class="bar-label"><strong>TOTAL</strong></span>
           <div class="bar-track"><div class="bar-fill" style="width:100%;background:#90A4AE"></div></div>
-          <span class="bar-val"><strong>₹1,861,732</strong></span>
+          <span class="bar-val"><strong>₹1,897,454</strong></span>
         </div></div>
   <div class='table-wrap'><h4>Outlet Type × Brand (MTD)</h4><table class="dataframe data-table">
   <thead>
@@ -178,21 +365,21 @@
   <tbody>
     <tr>
       <th>GT</th>
-      <td>105,408</td>
-      <td>465,315</td>
-      <td>15,795</td>
-      <td>323,962</td>
-      <td>108,566</td>
-      <td>1,019,047</td>
+      <td>109,256</td>
+      <td>478,230</td>
+      <td>20,655</td>
+      <td>333,840</td>
+      <td>111,979</td>
+      <td>1,053,959</td>
     </tr>
     <tr>
       <th>MT</th>
-      <td>49,410</td>
+      <td>50,220</td>
       <td>97,912</td>
       <td>0</td>
       <td>127,856</td>
       <td>59,085</td>
-      <td>334,264</td>
+      <td>335,074</td>
     </tr>
     <tr>
       <th>RMT</th>
@@ -205,12 +392,12 @@
     </tr>
     <tr class='total-row'>
       <th>Total</th>
-      <td>223,027</td>
-      <td>737,044</td>
-      <td>18,225</td>
-      <td>636,518</td>
-      <td>230,441</td>
-      <td>1,845,254</td>
+      <td>227,684</td>
+      <td>749,959</td>
+      <td>23,085</td>
+      <td>646,395</td>
+      <td>233,854</td>
+      <td>1,880,977</td>
     </tr>
   </tbody>
 </table></div>
@@ -265,12 +452,12 @@
     </tr>
     <tr>
       <th>GT</th>
-      <td>105,408</td>
-      <td>465,315</td>
-      <td>15,795</td>
-      <td>323,962</td>
-      <td>108,566</td>
-      <td>1,019,047</td>
+      <td>109,256</td>
+      <td>478,230</td>
+      <td>20,655</td>
+      <td>333,840</td>
+      <td>111,979</td>
+      <td>1,053,959</td>
     </tr>
     <tr>
       <th>Garg Dastak</th>
@@ -346,12 +533,12 @@
     </tr>
     <tr>
       <th>Reliance</th>
-      <td>2,835</td>
+      <td>3,645</td>
       <td>2,152</td>
       <td>0</td>
       <td>1,406</td>
       <td>4,095</td>
-      <td>10,489</td>
+      <td>11,299</td>
     </tr>
     <tr>
       <th>Sampoorna</th>
@@ -418,12 +605,12 @@
     </tr>
     <tr class='total-row'>
       <th>Total</th>
-      <td>223,027</td>
-      <td>737,044</td>
-      <td>18,225</td>
-      <td>636,518</td>
-      <td>230,441</td>
-      <td>1,845,254</td>
+      <td>227,684</td>
+      <td>749,959</td>
+      <td>23,085</td>
+      <td>646,395</td>
+      <td>233,854</td>
+      <td>1,880,977</td>
     </tr>
   </tbody>
 </table></div>
@@ -454,45 +641,52 @@
     </tr>
     <tr>
       <th>Delhi NCR</th>
-      <td>443,626</td>
+      <td>458,994</td>
       <td>0</td>
       <td>69,188</td>
-      <td>512,814</td>
+      <td>528,182</td>
     </tr>
     <tr>
       <th>KA</th>
-      <td>113,034</td>
-      <td>161,059</td>
+      <td>116,049</td>
+      <td>161,869</td>
       <td>59,655</td>
-      <td>333,748</td>
+      <td>337,573</td>
     </tr>
     <tr>
       <th>KL</th>
-      <td>239,336</td>
+      <td>245,921</td>
       <td>134,325</td>
       <td>161,970</td>
-      <td>535,631</td>
+      <td>542,216</td>
+    </tr>
+    <tr>
+      <th>Punjab</th>
+      <td>3,150</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3,150</td>
     </tr>
     <tr>
       <th>TN</th>
-      <td>127,305</td>
+      <td>134,100</td>
       <td>0</td>
       <td>0</td>
-      <td>127,305</td>
+      <td>134,100</td>
     </tr>
     <tr class='total-row'>
       <th>Total</th>
-      <td>1,019,047</td>
-      <td>334,264</td>
+      <td>1,053,959</td>
+      <td>335,074</td>
       <td>491,944</td>
-      <td>1,845,254</td>
+      <td>1,880,977</td>
     </tr>
   </tbody>
 </table></div>
 </div>
 
 <footer>
-  Generated 2026-08-30 21:26 | Data source: Bizom Order vs Fulfilment
+  Generated 2026-08-31 20:24 | Data source: Bizom Order vs Fulfilment
   
         <details style='margin-top:8px'>
           <summary style='cursor:pointer;color:#F44336'>36 unmapped outlet/employee records (click to expand)</summary>
@@ -560,7 +754,7 @@
   </thead>
   <tbody>
     <tr>
-      <th>929</th>
+      <th>934</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -619,7 +813,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>930</th>
+      <th>935</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -678,7 +872,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>931</th>
+      <th>936</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -737,7 +931,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>932</th>
+      <th>937</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -796,7 +990,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>933</th>
+      <th>938</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -855,7 +1049,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>1136</th>
+      <th>1141</th>
       <td>NORTH</td>
       <td>HARYANA</td>
       <td>MANJU ENTERPRISES</td>
@@ -914,7 +1108,7 @@
       <td>Delhi NCR</td>
     </tr>
     <tr>
-      <th>1137</th>
+      <th>1142</th>
       <td>NORTH</td>
       <td>HARYANA</td>
       <td>MANJU ENTERPRISES</td>
@@ -973,7 +1167,7 @@
       <td>Delhi NCR</td>
     </tr>
     <tr>
-      <th>1138</th>
+      <th>1143</th>
       <td>NORTH</td>
       <td>HARYANA</td>
       <td>MANJU ENTERPRISES</td>
@@ -1032,7 +1226,7 @@
       <td>Delhi NCR</td>
     </tr>
     <tr>
-      <th>1139</th>
+      <th>1144</th>
       <td>NORTH</td>
       <td>HARYANA</td>
       <td>MANJU ENTERPRISES</td>
@@ -1091,7 +1285,7 @@
       <td>Delhi NCR</td>
     </tr>
     <tr>
-      <th>1140</th>
+      <th>1145</th>
       <td>NORTH</td>
       <td>HARYANA</td>
       <td>MANJU ENTERPRISES</td>
@@ -1150,7 +1344,7 @@
       <td>Delhi NCR</td>
     </tr>
     <tr>
-      <th>1308</th>
+      <th>1313</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -1209,7 +1403,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>1309</th>
+      <th>1314</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -1268,7 +1462,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>1310</th>
+      <th>1315</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -1327,7 +1521,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>1448</th>
+      <th>1453</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -1386,7 +1580,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>1449</th>
+      <th>1454</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -1445,7 +1639,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>1450</th>
+      <th>1455</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -1504,7 +1698,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>1451</th>
+      <th>1456</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -1563,7 +1757,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>1452</th>
+      <th>1457</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -1622,7 +1816,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>1453</th>
+      <th>1458</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -1681,7 +1875,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>1454</th>
+      <th>1459</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -1740,7 +1934,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>1455</th>
+      <th>1460</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -1799,7 +1993,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>1456</th>
+      <th>1461</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -1858,7 +2052,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>1457</th>
+      <th>1462</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -1917,7 +2111,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>1458</th>
+      <th>1463</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -1976,7 +2170,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>1459</th>
+      <th>1464</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -2035,7 +2229,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>1460</th>
+      <th>1465</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -2094,7 +2288,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>1461</th>
+      <th>1466</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -2153,7 +2347,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>1462</th>
+      <th>1467</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -2212,7 +2406,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>1463</th>
+      <th>1468</th>
       <td>SOUTH-2</td>
       <td>KERALA</td>
       <td>UNITED AGENCIES</td>
@@ -2271,7 +2465,7 @@
       <td>KL</td>
     </tr>
     <tr>
-      <th>1905</th>
+      <th>1910</th>
       <td>SOUTH-3</td>
       <td>TAMILNADU</td>
       <td>STEWARD INTERNATIONAL</td>
@@ -2330,7 +2524,7 @@
       <td>TN</td>
     </tr>
     <tr>
-      <th>1906</th>
+      <th>1911</th>
       <td>SOUTH-3</td>
       <td>TAMILNADU</td>
       <td>STEWARD INTERNATIONAL</td>
@@ -2389,7 +2583,7 @@
       <td>TN</td>
     </tr>
     <tr>
-      <th>1907</th>
+      <th>1912</th>
       <td>SOUTH-3</td>
       <td>TAMILNADU</td>
       <td>STEWARD INTERNATIONAL</td>
@@ -2448,7 +2642,7 @@
       <td>TN</td>
     </tr>
     <tr>
-      <th>1908</th>
+      <th>1913</th>
       <td>SOUTH-3</td>
       <td>TAMILNADU</td>
       <td>STEWARD INTERNATIONAL</td>
@@ -2507,7 +2701,7 @@
       <td>TN</td>
     </tr>
     <tr>
-      <th>1909</th>
+      <th>1914</th>
       <td>SOUTH-3</td>
       <td>TAMILNADU</td>
       <td>STEWARD INTERNATIONAL</td>
@@ -2566,7 +2760,7 @@
       <td>TN</td>
     </tr>
     <tr>
-      <th>1910</th>
+      <th>1915</th>
       <td>SOUTH-3</td>
       <td>TAMILNADU</td>
       <td>STEWARD INTERNATIONAL</td>
@@ -2625,7 +2819,7 @@
       <td>TN</td>
     </tr>
     <tr>
-      <th>1911</th>
+      <th>1916</th>
       <td>SOUTH-3</td>
       <td>TAMILNADU</td>
       <td>STEWARD INTERNATIONAL</td>
