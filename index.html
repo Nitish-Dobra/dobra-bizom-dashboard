@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DOBRA Secondary Sales Dashboard — 2026-10-25</title>
+<title>DOBRA Secondary Sales Dashboard — 2026-10-27</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 <style>
   *{box-sizing:border-box;margin:0;padding:0}
@@ -43,9 +43,9 @@
 </head>
 <body>
 <header>
-  <h1>DOBRA Secondary Sales Dashboard — 2026-10-25</h1>
+  <h1>DOBRA Secondary Sales Dashboard — 2026-10-27</h1>
   <div class="header-right">
-    <span class="delta">▼ ₹464,468 vs yesterday</span>
+    <span class="delta">▼ ₹22,598 vs yesterday</span>
     <a class="game-link" href="Game.html">🏪 Play the Storefront Game</a>
   </div>
 </header>
@@ -58,25 +58,226 @@
 <!-- FTD Section -->
 <div id="ftd" class="section active">
   <div class='cards'><div class='card' style='border-top:4px solid #2196F3'>
-          <div class='card-val'>₹0</div>
+          <div class='card-val'>₹78,041</div>
           <div class='card-label'>Total Offtake</div>
         </div><div class='card' style='border-top:4px solid #4CAF50'>
-          <div class='card-val'>—</div>
+          <div class='card-val'>Pop Goli Soda</div>
           <div class='card-label'>Top Brand</div>
         </div><div class='card' style='border-top:4px solid #FF9800'>
-          <div class='card-val'>—</div>
+          <div class='card-val'>GT</div>
           <div class='card-label'>Top Outlet Type</div>
         </div><div class='card' style='border-top:4px solid #9C27B0'>
-          <div class='card-val'>—</div>
+          <div class='card-val'>GT</div>
           <div class='card-label'>Top Chain</div>
         </div><div class='card' style='border-top:4px solid #F44336'>
-          <div class='card-val'>—</div>
+          <div class='card-val'>Delhi NCR</div>
           <div class='card-label'>Top Region</div>
         </div></div>
-  
-  <p><em>No data</em></p>
-  <p><em>No data</em></p>
-  <p><em>No data</em></p>
+  <div class='chart-wrap'><h4>Brand-wise Offtake (FTD)</h4>
+        <div class="bar-row">
+          <span class="bar-label">Pop Goli Soda</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:43.0%;background:#2196F3"></div>
+          </div>
+          <span class="bar-val">₹33,581</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Coco Poco</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:33.9%;background:#2196F3"></div>
+          </div>
+          <span class="bar-val">₹26,460</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Cotton Candy</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:17.3%;background:#2196F3"></div>
+          </div>
+          <span class="bar-val">₹13,466</span>
+        </div>
+        <div class="bar-row">
+          <span class="bar-label">Tapioca Crisps</span>
+          <div class="bar-track">
+            <div class="bar-fill" style="width:5.8%;background:#2196F3"></div>
+          </div>
+          <span class="bar-val">₹4,534</span>
+        </div>
+        <div class="bar-row" style="margin-top:6px;border-top:2px solid #ddd;padding-top:6px">
+          <span class="bar-label"><strong>TOTAL</strong></span>
+          <div class="bar-track"><div class="bar-fill" style="width:100%;background:#90A4AE"></div></div>
+          <span class="bar-val"><strong>₹78,041</strong></span>
+        </div></div>
+  <div class='table-wrap'><h4>Outlet Type × Brand (FTD)</h4><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Sku_Brand</th>
+      <th>DCC</th>
+      <th>DCP</th>
+      <th>DPGS</th>
+      <th>DTC</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      <th>Outlet Type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GT</th>
+      <td>12,150</td>
+      <td>19,425</td>
+      <td>19,328</td>
+      <td>2,632</td>
+      <td>53,535</td>
+    </tr>
+    <tr>
+      <th>MT</th>
+      <td>1,215</td>
+      <td>5,040</td>
+      <td>4,050</td>
+      <td>0</td>
+      <td>10,305</td>
+    </tr>
+    <tr>
+      <th>RMT</th>
+      <td>101</td>
+      <td>735</td>
+      <td>844</td>
+      <td>146</td>
+      <td>1,826</td>
+    </tr>
+    <tr class='total-row'>
+      <th>Total</th>
+      <td>13,466</td>
+      <td>25,200</td>
+      <td>24,221</td>
+      <td>2,779</td>
+      <td>65,666</td>
+    </tr>
+  </tbody>
+</table></div>
+  <div class='table-wrap'><h4>Chain × Brand (FTD)</h4><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Sku_Brand</th>
+      <th>DCC</th>
+      <th>DCP</th>
+      <th>DPGS</th>
+      <th>DTC</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      <th>Chain</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GT</th>
+      <td>12,150</td>
+      <td>19,425</td>
+      <td>19,328</td>
+      <td>2,632</td>
+      <td>53,535</td>
+    </tr>
+    <tr>
+      <th>Garg Dastak</th>
+      <td>0</td>
+      <td>420</td>
+      <td>675</td>
+      <td>0</td>
+      <td>1,095</td>
+    </tr>
+    <tr>
+      <th>Lulu</th>
+      <td>1,215</td>
+      <td>5,040</td>
+      <td>4,050</td>
+      <td>0</td>
+      <td>10,305</td>
+    </tr>
+    <tr>
+      <th>Sodhi</th>
+      <td>101</td>
+      <td>315</td>
+      <td>169</td>
+      <td>146</td>
+      <td>731</td>
+    </tr>
+    <tr class='total-row'>
+      <th>Total</th>
+      <td>13,466</td>
+      <td>25,200</td>
+      <td>24,221</td>
+      <td>2,779</td>
+      <td>65,666</td>
+    </tr>
+  </tbody>
+</table></div>
+  <div class='table-wrap'><h4>Region × Outlet Type (FTD)</h4><table class="dataframe data-table">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Outlet Type</th>
+      <th>GT</th>
+      <th>MT</th>
+      <th>RMT</th>
+      <th>Total</th>
+    </tr>
+    <tr>
+      <th>Region</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Delhi NCR</th>
+      <td>22,504</td>
+      <td>0</td>
+      <td>1,826</td>
+      <td>24,330</td>
+    </tr>
+    <tr>
+      <th>KA</th>
+      <td>3,375</td>
+      <td>10,305</td>
+      <td>0</td>
+      <td>13,680</td>
+    </tr>
+    <tr>
+      <th>KL</th>
+      <td>13,620</td>
+      <td>0</td>
+      <td>0</td>
+      <td>13,620</td>
+    </tr>
+    <tr>
+      <th>TN</th>
+      <td>810</td>
+      <td>0</td>
+      <td>0</td>
+      <td>810</td>
+    </tr>
+    <tr class='total-row'>
+      <th>Total</th>
+      <td>40,309</td>
+      <td>10,305</td>
+      <td>1,826</td>
+      <td>52,440</td>
+    </tr>
+  </tbody>
+</table></div>
 </div>
 
 <!-- MTD Section -->
@@ -91,14 +292,14 @@
       var ctx = document.getElementById('trendChart').getContext('2d');
       new Chart(ctx, {
         type: 'line',
-        data: {"labels": ["2026-10-01", "2026-10-03", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09", "2026-10-10", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-17", "2026-10-19", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-24"], "datasets": [{"label": "Cotton Candy", "data": [4050, 0, 26190, 39690, 10530, 27067, 6075, 12217, 32163, 3645, 16875, 8606, 40196, 13972, 5670, 202, 14107, 8910, 12993], "borderColor": "#2196F3", "backgroundColor": "#2196F333", "fill": true, "tension": 0.3}, {"label": "Coco Poco", "data": [6772, 7140, 1575, 91035, 23520, 58485, 20475, 72765, 26355, 12915, 63000, 16065, 10237, 34807, 6930, 0, 15277, 8820, 95550], "borderColor": "#4CAF50", "backgroundColor": "#4CAF5033", "fill": true, "tension": 0.3}, {"label": "Pop Goli Soda", "data": [42933, 13800, 22567, 67410, 31350, 46620, 31447, 61417, 18090, 19222, 91957, 24525, 67466, 34852, 26088, 337, 27360, 33660, 60363], "borderColor": "#FF9800", "backgroundColor": "#FF980033", "fill": true, "tension": 0.3}, {"label": "Tapioca Crisps", "data": [1170, 0, 11700, 3656, 2437, 731, 4680, 11115, 15112, 43875, 10627, 7361, 45093, 10822, 0, 1755, 5850, 12772, 63326], "borderColor": "#9C27B0", "backgroundColor": "#9C27B033", "fill": true, "tension": 0.3}, {"label": "Pop Boba", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 2430, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#2196F3", "backgroundColor": "#2196F333", "fill": true, "tension": 0.3}]},
+        data: {"labels": ["2026-10-01", "2026-10-03", "2026-10-05", "2026-10-06", "2026-10-07", "2026-10-08", "2026-10-09", "2026-10-10", "2026-10-12", "2026-10-13", "2026-10-14", "2026-10-15", "2026-10-16", "2026-10-17", "2026-10-19", "2026-10-21", "2026-10-22", "2026-10-23", "2026-10-24", "2026-10-26", "2026-10-27"], "datasets": [{"label": "Cotton Candy", "data": [4050, 0, 26190, 39690, 10530, 27067, 6075, 12217, 32163, 3645, 16875, 8606, 40196, 13972, 5670, 202, 14107, 8910, 12993, 17853, 13466], "borderColor": "#2196F3", "backgroundColor": "#2196F333", "fill": true, "tension": 0.3}, {"label": "Coco Poco", "data": [6772, 7140, 1575, 91035, 23520, 58485, 20475, 72765, 26355, 12915, 63000, 16065, 10237, 34807, 6930, 0, 15277, 8820, 95550, 11865, 26460], "borderColor": "#4CAF50", "backgroundColor": "#4CAF5033", "fill": true, "tension": 0.3}, {"label": "Pop Goli Soda", "data": [42933, 13800, 22567, 67410, 31350, 46620, 31447, 61417, 18090, 19222, 91957, 24525, 67466, 34852, 26088, 337, 27360, 33660, 60363, 47336, 33581], "borderColor": "#FF9800", "backgroundColor": "#FF980033", "fill": true, "tension": 0.3}, {"label": "Tapioca Crisps", "data": [1170, 0, 11700, 3656, 2437, 731, 4680, 11115, 15112, 43875, 10627, 7361, 45093, 10822, 0, 1755, 5850, 12772, 63326, 12285, 4533], "borderColor": "#9C27B0", "backgroundColor": "#9C27B033", "fill": true, "tension": 0.3}, {"label": "Pop Boba", "data": [0, 0, 0, 0, 0, 0, 0, 0, 0, 2430, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "borderColor": "#2196F3", "backgroundColor": "#2196F333", "fill": true, "tension": 0.3}]},
         options: {responsive:true, plugins:{legend:{position:'top'}},
                    scales:{y:{beginAtZero:true}}}
       });
     })();
     </script>
   <div class='cards'><div class='card' style='border-top:4px solid #2196F3'>
-          <div class='card-val'>₹1,830,874</div>
+          <div class='card-val'>₹1,998,255</div>
           <div class='card-label'>Total Offtake</div>
         </div><div class='card' style='border-top:4px solid #4CAF50'>
           <div class='card-val'>Pop Goli Soda</div>
@@ -117,30 +318,30 @@
         <div class="bar-row">
           <span class="bar-label">Pop Goli Soda</span>
           <div class="bar-track">
-            <div class="bar-fill" style="width:39.4%;background:#4CAF50"></div>
+            <div class="bar-fill" style="width:40.2%;background:#4CAF50"></div>
           </div>
-          <span class="bar-val">₹721,470</span>
+          <span class="bar-val">₹802,388</span>
         </div>
         <div class="bar-row">
           <span class="bar-label">Coco Poco</span>
           <div class="bar-track">
-            <div class="bar-fill" style="width:31.2%;background:#4CAF50"></div>
+            <div class="bar-fill" style="width:30.5%;background:#4CAF50"></div>
           </div>
-          <span class="bar-val">₹571,725</span>
+          <span class="bar-val">₹610,050</span>
         </div>
         <div class="bar-row">
           <span class="bar-label">Cotton Candy</span>
           <div class="bar-track">
-            <div class="bar-fill" style="width:15.5%;background:#4CAF50"></div>
+            <div class="bar-fill" style="width:15.7%;background:#4CAF50"></div>
           </div>
-          <span class="bar-val">₹283,162</span>
+          <span class="bar-val">₹314,482</span>
         </div>
         <div class="bar-row">
           <span class="bar-label">Tapioca Crisps</span>
           <div class="bar-track">
-            <div class="bar-fill" style="width:13.8%;background:#4CAF50"></div>
+            <div class="bar-fill" style="width:13.5%;background:#4CAF50"></div>
           </div>
-          <span class="bar-val">₹252,086</span>
+          <span class="bar-val">₹268,905</span>
         </div>
         <div class="bar-row">
           <span class="bar-label">Pop Boba</span>
@@ -152,7 +353,7 @@
         <div class="bar-row" style="margin-top:6px;border-top:2px solid #ddd;padding-top:6px">
           <span class="bar-label"><strong>TOTAL</strong></span>
           <div class="bar-track"><div class="bar-fill" style="width:100%;background:#90A4AE"></div></div>
-          <span class="bar-val"><strong>₹1,830,874</strong></span>
+          <span class="bar-val"><strong>₹1,998,255</strong></span>
         </div></div>
   <div class='table-wrap'><h4>Outlet Type × Brand (MTD)</h4><table class="dataframe data-table">
   <thead>
@@ -176,35 +377,35 @@
   <tbody>
     <tr>
       <th>GT</th>
-      <td>175,129</td>
-      <td>325,080</td>
-      <td>406,905</td>
-      <td>155,902</td>
-      <td>1,063,016</td>
+      <td>189,911</td>
+      <td>347,970</td>
+      <td>433,084</td>
+      <td>158,535</td>
+      <td>1,129,500</td>
     </tr>
     <tr>
       <th>MT</th>
-      <td>40,568</td>
-      <td>100,170</td>
-      <td>95,175</td>
-      <td>27,982</td>
-      <td>263,895</td>
+      <td>42,998</td>
+      <td>106,470</td>
+      <td>101,925</td>
+      <td>30,322</td>
+      <td>281,715</td>
     </tr>
     <tr>
       <th>RMT</th>
-      <td>55,148</td>
-      <td>124,950</td>
-      <td>181,264</td>
-      <td>61,425</td>
-      <td>422,786</td>
+      <td>56,464</td>
+      <td>129,045</td>
+      <td>182,108</td>
+      <td>61,571</td>
+      <td>429,188</td>
     </tr>
     <tr class='total-row'>
       <th>Total</th>
-      <td>270,844</td>
-      <td>550,200</td>
-      <td>683,344</td>
-      <td>245,310</td>
-      <td>1,749,698</td>
+      <td>289,372</td>
+      <td>583,485</td>
+      <td>717,116</td>
+      <td>250,429</td>
+      <td>1,840,402</td>
     </tr>
   </tbody>
 </table></div>
@@ -246,11 +447,11 @@
     </tr>
     <tr>
       <th>Brown Tree</th>
-      <td>810</td>
+      <td>2,025</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>810</td>
+      <td>2,025</td>
     </tr>
     <tr>
       <th>Day Mart</th>
@@ -262,19 +463,19 @@
     </tr>
     <tr>
       <th>GT</th>
-      <td>175,129</td>
-      <td>325,080</td>
-      <td>406,905</td>
-      <td>155,902</td>
-      <td>1,063,016</td>
+      <td>189,911</td>
+      <td>347,970</td>
+      <td>433,084</td>
+      <td>158,535</td>
+      <td>1,129,500</td>
     </tr>
     <tr>
       <th>Garg Dastak</th>
       <td>0</td>
-      <td>1,260</td>
-      <td>3,375</td>
+      <td>5,040</td>
+      <td>4,050</td>
       <td>0</td>
-      <td>4,635</td>
+      <td>9,090</td>
     </tr>
     <tr>
       <th>Grand Fresh</th>
@@ -294,11 +495,11 @@
     </tr>
     <tr>
       <th>Lulu</th>
-      <td>39,285</td>
-      <td>97,650</td>
-      <td>90,900</td>
-      <td>25,448</td>
-      <td>253,282</td>
+      <td>40,500</td>
+      <td>103,950</td>
+      <td>96,300</td>
+      <td>26,618</td>
+      <td>267,368</td>
     </tr>
     <tr>
       <th>Moolans</th>
@@ -342,11 +543,11 @@
     </tr>
     <tr>
       <th>Reliance</th>
-      <td>0</td>
+      <td>1,215</td>
       <td>2,520</td>
-      <td>2,790</td>
-      <td>0</td>
-      <td>5,310</td>
+      <td>4,140</td>
+      <td>1,170</td>
+      <td>9,045</td>
     </tr>
     <tr>
       <th>Sampoorna</th>
@@ -358,11 +559,11 @@
     </tr>
     <tr>
       <th>Sodhi</th>
-      <td>0</td>
-      <td>2,835</td>
-      <td>1,181</td>
-      <td>292</td>
-      <td>4,309</td>
+      <td>101</td>
+      <td>3,150</td>
+      <td>1,350</td>
+      <td>439</td>
+      <td>5,040</td>
     </tr>
     <tr>
       <th>Storex</th>
@@ -414,11 +615,11 @@
     </tr>
     <tr class='total-row'>
       <th>Total</th>
-      <td>270,844</td>
-      <td>550,200</td>
-      <td>683,344</td>
-      <td>245,310</td>
-      <td>1,749,698</td>
+      <td>289,372</td>
+      <td>583,485</td>
+      <td>717,116</td>
+      <td>250,429</td>
+      <td>1,840,402</td>
     </tr>
   </tbody>
 </table></div>
@@ -449,48 +650,48 @@
     </tr>
     <tr>
       <th>Delhi NCR</th>
-      <td>398,351</td>
+      <td>426,480</td>
       <td>0</td>
-      <td>50,108</td>
-      <td>448,459</td>
+      <td>55,294</td>
+      <td>481,774</td>
     </tr>
     <tr>
       <th>KA</th>
-      <td>27,652</td>
-      <td>58,200</td>
+      <td>31,028</td>
+      <td>76,020</td>
       <td>14,220</td>
-      <td>100,072</td>
+      <td>121,268</td>
     </tr>
     <tr>
       <th>KL</th>
-      <td>426,476</td>
+      <td>442,155</td>
       <td>135,855</td>
       <td>125,370</td>
-      <td>687,701</td>
+      <td>703,380</td>
     </tr>
     <tr>
       <th>TN</th>
-      <td>87,788</td>
+      <td>93,862</td>
       <td>0</td>
-      <td>18,360</td>
-      <td>106,148</td>
+      <td>19,575</td>
+      <td>113,438</td>
     </tr>
     <tr class='total-row'>
       <th>Total</th>
-      <td>1,054,579</td>
-      <td>263,895</td>
-      <td>422,786</td>
-      <td>1,741,260</td>
+      <td>1,107,836</td>
+      <td>281,715</td>
+      <td>429,188</td>
+      <td>1,818,739</td>
     </tr>
   </tbody>
 </table></div>
 </div>
 
 <footer>
-  Generated 2026-10-25 20:33 | Data source: Bizom Order vs Fulfilment
+  Generated 2026-10-27 21:09 | Data source: Bizom Order vs Fulfilment
   
         <details style='margin-top:8px'>
-          <summary style='cursor:pointer;color:#F44336'>243 unmapped outlet/employee records (click to expand)</summary>
+          <summary style='cursor:pointer;color:#F44336'>368 unmapped outlet/employee records (click to expand)</summary>
           <div class='table-wrap'><table class="dataframe data-table">
   <thead>
     <tr style="text-align: right;">
