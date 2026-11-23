@@ -515,7 +515,7 @@ function renderOL() {
   const gcol = (k, l, title) => ({k: k + 's', l, num: true, sum: false, title, render: (v, r) => gCell(r[k])});
   const cols = [{k: 'name', l: 'Outlet', txt: true, csv: 'Outlet'}];
   if (ST.olMode === 'ob') cols.push({k: 'brand', l: 'Brand', txt: true});
-  cols.push({k: 'otype', l: 'Outlet type', txt: true}, {k: 'chain', l: 'Chain', txt: true});
+  cols.push({k: 'user', l: 'User', txt: true, title: 'User on the latest order'}, {k: 'otype', l: 'Outlet type', txt: true}, {k: 'chain', l: 'Chain', txt: true});
   MONTHS.forEach((m) => cols.push({k: m, l: mShort(m) + (m === CM ? ' MTD' : ''), num: true, heat: 'row', cls: m === CM ? 'cur' : '', csv: m + (m === CM ? ' (MTD)' : '')}));
   cols.push({k: 'tot', l: '6M total', num: true}, {k: 'avg', l: 'Avg/mo', num: true, title: 'Average of the ' + (MONTHS.length - 1) + ' closed months', sum: false}, gcol('gpm', mShort(PM) + ' vs ' + mShort(MONTHS[MONTHS.length - 3]), 'Last full month against the month before'));
   if (ST.olMode === 'o') cols.push(gcol('gmt', 'MTD vs LMTD', 'This month to date against the same days last month'));
@@ -523,7 +523,7 @@ function renderOL() {
   const shown = Math.min(ST.olLimit, rows.length);
   $('ol-cnt').textContent = rows.length ? 'Showing ' + num(shown) + ' of ' + num(rows.length) + (ST.olMode === 'o' ? ' outlets' : ' outlet × brand rows') + '. The total row covers all of them.' : '';
   const mb = $('ol-more'); mb.hidden = shown >= rows.length; mb.textContent = 'Show ' + Math.min(200, rows.length - shown) + ' more';
-  $('ol-t').__csv = () => { const extra = [{k: 'id', l: 'Outlet ID'}, {k: 'user', l: 'Last user'}, {k: 'dist', l: 'Distributor'}, {k: 'city', l: 'City'}, {k: 'lastOrder', l: 'Last order'}];
+  $('ol-t').__csv = () => { const extra = [{k: 'id', l: 'Outlet ID'}, {k: 'dist', l: 'Distributor'}, {k: 'city', l: 'City'}, {k: 'lastOrder', l: 'Last order'}];
     const cc = cols.filter((c) => !c.render).concat(cols.filter((c) => c.render).map((c) => ({k: c.k.slice(0, -1) + 'T', l: c.l}))); const out = (ST.olMode === 'o' ? rows.flatMap((r) => [r, ...r._kids.map((k) => ({...k, name: r.name + ' — ' + k.name, id: r.id, user: r.user, dist: r.dist, otype: r.otype, chain: r.chain, city: r.city, lastOrder: r.lastOrder}))]) : rows).map((r) => ({...r, gpmT: gText(r.gpm), gmtT: gText(r.gmt)}));
     csv('outlets_6m_' + ST.olMode, [cc[0]].concat(extra, cc.slice(1)), out); };
   // kpis
