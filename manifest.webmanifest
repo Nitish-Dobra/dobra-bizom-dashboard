@@ -1,0 +1,16 @@
+{
+  "name": "DOBRA Secondary Sales",
+  "short_name": "DOBRA Sales",
+  "description": "Bizom secondary sales: today, MTD, user-wise and outlet 6-month views.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#25256A",
+  "theme_color": "#25256A",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}
